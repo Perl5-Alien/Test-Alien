@@ -10,7 +10,10 @@ my %modules;
 my $post_diag;
 
 $modules{$_} = $_ for qw(
+  Capture::Tiny
+  Env
   ExtUtils::MakeMaker
+  File::Which
   Test::More
   Test::Stream
   Test::Stream::Context
