@@ -27,6 +27,28 @@ object, which you can use to test the exit status, output and standard error.
 
 Always returns an instance of [Test::Alien::Run](https://metacpan.org/pod/Test::Alien::Run), even if the command could not be found.
 
+## xs\_ok
+
+    xs_ok $xs;
+    xs_ok $xs, $message;
+
+Compiles, links the given `XS` code and attaches to Perl.
+
+`$xs` may be either a string containing the `XS` code,
+or a hash reference with these keys:
+
+- xs
+
+    The XS code.  This is the only required element.
+
+- pxs
+
+    The [ExtUtils::ParseXS](https://metacpan.org/pod/ExtUtils::ParseXS) arguments passes as a hash reference.
+
+- verbose
+
+    Spew copious debug information via test note.
+
 # AUTHOR
 
 Graham Ollis &lt;plicease@cpan.org>

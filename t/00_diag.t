@@ -12,12 +12,19 @@ my $post_diag;
 $modules{$_} = $_ for qw(
   Capture::Tiny
   Env
+  ExtUtils::CBuilder
   ExtUtils::MakeMaker
+  ExtUtils::ParseXS
+  FFI::Platypus
+  File::Spec
+  File::Temp
   File::Which
   Test::More
   Test::Stream
   Test::Stream::Context
   Test::Stream::Exporter
+  Test::Stream::Plugin
+  Text::ParseWords
 );
 
 
