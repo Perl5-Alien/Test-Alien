@@ -55,6 +55,25 @@ to work easily with [Alien::Base](https://metacpan.org/pod/Alien::Base) based mo
 via the synthetic interface to test non [Alien::Base](https://metacpan.org/pod/Alien::Base) based [Alien](https://metacpan.org/pod/Alien)
 modules.  It has very modest prerequisites.
 
+Prior to this module the best way to test a [Alien](https://metacpan.org/pod/Alien) module was via [Test::CChecker](https://metacpan.org/pod/Test::CChecker).
+The main downside to that module is that it is heavily influenced by and uses
+[ExtUtils::CChecker](https://metacpan.org/pod/ExtUtils::CChecker), which is a tool for checking at install time various things
+about your compiler.  It was also written before [Alien::Base](https://metacpan.org/pod/Alien::Base) became as stable as it
+is today.  In particular, [Test::CChecker](https://metacpan.org/pod/Test::CChecker) does its testing by creating an executable
+and running it.  Unfortunately Perl uses extensions by creating dynamic libraries
+and linking them into the Perl process, which is different in subtle and error prone
+ways.  This module attempts to test the libraries in the way that they will actually
+be used, via either `XS` or [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus).  It also provides a mechanism for
+testing binaries that are provided by the various [Alien](https://metacpan.org/pod/Alien) modules (for example
+[Alien::gmake](https://metacpan.org/pod/Alien::gmake) and [Alien::patch](https://metacpan.org/pod/Alien::patch)).
+
+[Alien](https://metacpan.org/pod/Alien) modules can actually be useable without a compiler, or without [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus)
+(for example, if the library is provided by the system, and you are using [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus),
+or if you are building from source and you are using `XS`), so tests with missing
+prerequisites are automatically skipped.  For example, ["xs\_ok"](#xs_ok) will automatically skip
+itself if a compiler is not found, and ["ffi\_ok"](#ffi_ok) will automatically skip itself
+if [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus) is not installed.
+
 **NOTE**: This module uses [Test::Stream](https://metacpan.org/pod/Test::Stream) instead of the classic [Test::More](https://metacpan.org/pod/Test::More).
 As of this writing that makes it incompatible with the vast majority of
 testing modules on CPAN.  This will change when/if [Test::Stream](https://metacpan.org/pod/Test::Stream) replaces
@@ -129,6 +148,28 @@ skipped.  Example:
 The module name detected during the XS parsing phase will
 be passed in to the subtest.  This is helpful when you are
 using a generated module name.
+
+## ffi\_ok
+
+    ffi_ok;
+    ffi_ok \%opt;
+    ffi_ok \%opt, $message;
+
+`\%opt` is a hash reference with these keys (all optional):
+
+- symbols
+
+    List references of symbols that must be found for the test to succeed.
+
+- ignore\_not\_found
+
+    Ignores symbols that aren't found.  This affects functions accessed via
+    [FFI::Platypus#attach](https://metacpan.org/pod/FFI::Platypus#attach) and [FFI::Platypus#function](https://metacpan.org/pod/FFI::Platypus#function) methods, and does
+    not influence the `symbols` key above.
+
+- lang
+
+    Set the language.  Used primarily for language specific native types.
 
 # SEE ALSO
 

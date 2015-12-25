@@ -9,6 +9,8 @@ pod_spelling_system:
     - diag
     - pxs
     - xs
+    - lang
+    - useable
 
 pod_coverage:
   skip: 0
