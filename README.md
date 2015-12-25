@@ -130,6 +130,14 @@ The module name detected during the XS parsing phase will
 be passed in to the subtest.  This is helpful when you are
 using a generated module name.
 
+# SEE ALSO
+
+- [Test::Stream](https://metacpan.org/pod/Test::Stream)
+- [Test::Alien::Run](https://metacpan.org/pod/Test::Alien::Run)
+- [Test::Alien::CanCompile](https://metacpan.org/pod/Test::Alien::CanCompile)
+- [Test::Alien::CanPlatypus](https://metacpan.org/pod/Test::Alien::CanPlatypus)
+- [Test::Alien::Synthetic](https://metacpan.org/pod/Test::Alien::Synthetic)
+
 # CAVEATS
 
 This module uses [Test::Stream](https://metacpan.org/pod/Test::Stream) instead of [Test::More](https://metacpan.org/pod/Test::More).
