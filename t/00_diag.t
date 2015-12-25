@@ -10,6 +10,7 @@ my %modules;
 my $post_diag;
 
 $modules{$_} = $_ for qw(
+  Alien::Base
   Capture::Tiny
   ExtUtils::CBuilder
   ExtUtils::MakeMaker
