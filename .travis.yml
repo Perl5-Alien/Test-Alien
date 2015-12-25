@@ -17,8 +17,6 @@ perl:
   - "5.22"
 
 script:
-  - prove -lv t
-  - cpanm Alien::Base -n
-  - prove -lv t
-  - cpanm FFI::Platypus -n
-  - prove -lv t
+  - perl util/prove
+  - perl util/prove Alien::Base
+  - perl util/prove FFI::Platypus
