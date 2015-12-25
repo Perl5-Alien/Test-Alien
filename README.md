@@ -2,6 +2,65 @@
 
 Testing tools for Alien modules
 
+# SYNOPSIS
+
+Test commands that come with your Alien:
+
+    use Test::Stream -V1;
+    use Test::Alien;
+    use Alien::patch;
+    
+    plan 4;
+    
+    alien_ok 'Alien::patch';
+    run_ok([ 'patch', '--version' ])
+      ->success
+      # we only accept the version written
+      # by Larry ...
+      ->out_like(qr{Larry Wall}); 
+
+Test that your library works with `XS`:
+
+    use Test::Stream -V1;
+    use Test::Alien;
+    use Alien::Editline;
+    
+    alien_ok 'Alien::Editline';
+    my $xs = do { local $/; <DATA> };
+    xs_ok $xs, with_subtest {
+    };
+    
+    __DATA__
+    
+    #include "EXTERN.h"
+    #include "perl.h"
+    #include "XSUB.h"
+    #include <editline/readline.h>
+    
+    const char *
+    version(const char *class)
+    {
+      return rl_library_version;
+    }
+    
+    MODULE = TA_MODULE PACKAGE = TA_MODULE
+    
+    const char *version(class);
+        const char *class;
+
+# DESCRIPTION
+
+This module provides tools for testing [Alien](https://metacpan.org/pod/Alien) modules.  It has hooks
+to work easily with [Alien::Base](https://metacpan.org/pod/Alien::Base) based modules, but can also be used
+via the synthetic interface to test non [Alien::Base](https://metacpan.org/pod/Alien::Base) based [Alien](https://metacpan.org/pod/Alien)
+modules.  It has very modest prerequisites.
+
+**NOTE**: This module uses [Test::Stream](https://metacpan.org/pod/Test::Stream) instead of the classic [Test::More](https://metacpan.org/pod/Test::More).
+As of this writing that makes it incompatible with the vast majority of
+testing modules on CPAN.  This will change when/if [Test::Stream](https://metacpan.org/pod/Test::Stream) replaces
+[Test::More](https://metacpan.org/pod/Test::More).  For the most part testing of [Alien](https://metacpan.org/pod/Alien) modules is done in
+isolation to other testing libraries so that shouldn't be too terrible.
+
 # FUNCTIONS
 
 ## alien\_ok
@@ -70,6 +129,14 @@ skipped.  Example:
 The module name detected during the XS parsing phase will
 be passed in to the subtest.  This is helpful when you are
 using a generated module name.
+
+# CAVEATS
+
+This module uses [Test::Stream](https://metacpan.org/pod/Test::Stream) instead of [Test::More](https://metacpan.org/pod/Test::More).
+
+Although [Test::Stream](https://metacpan.org/pod/Test::Stream) has gone "stable" it is a relatively new
+module, and thus the interface is probably still in a state of flux
+to some extent.
 
 # AUTHOR
 
