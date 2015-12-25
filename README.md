@@ -49,6 +49,17 @@ or a hash reference with these keys:
 
     Spew copious debug information via test note.
 
+You can use the `with_subtest` keyword to conditionally
+run a subtest if the `xs_ok` call succeeds.  If `xs_ok`
+does not work, then the subtest will automatically be
+skipped.  Example:
+
+    xs_ok $xs, with_subtest {
+      # skipped if $xs fails for some reason
+      plan 1;
+      ok 1;
+    };
+
 # AUTHOR
 
 Graham Ollis &lt;plicease@cpan.org>
