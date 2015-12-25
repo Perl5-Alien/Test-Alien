@@ -8,7 +8,7 @@ my $root = tempdir( CLEANUP => 1 );
 foreach my $mod (@ARGV)
 {
   eval qq{ use $mod () };
-  #die "$mod already installed!" unless $@;
+  die "$mod already installed!" unless $@;
   
   my($out, $err) = capture_merged {
     system( 'cpanm', '--reinstall', -l => $root,  -n => $mod );
