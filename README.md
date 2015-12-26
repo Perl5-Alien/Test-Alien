@@ -155,6 +155,8 @@ using a generated module name.
     ffi_ok \%opt;
     ffi_ok \%opt, $message;
 
+Test that [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus) works.
+
 `\%opt` is a hash reference with these keys (all optional):
 
 - symbols
@@ -170,6 +172,16 @@ using a generated module name.
 - lang
 
     Set the language.  Used primarily for language specific native types.
+
+As with ["xs\_ok"](#xs_ok) above, you can use the `with_subtest` keyword to specify
+a subtest to be run if `ffi_ok` succeeds (it will skip otherwise).  The
+[FFI::Platypus](https://metacpan.org/pod/FFI::Platypus) instance is passed into the subtest as the first argument.
+For example:
+
+    ffi_ok with_subtest {
+      my($ffi) = @_;
+      is $ffi->function(foo => [] => 'void')->call, 42;
+    };
 
 # SEE ALSO
 
