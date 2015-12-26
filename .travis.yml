@@ -21,3 +21,4 @@ script:
   - perl util/prove Alien::Base
   - perl util/prove FFI::Platypus
   - perl util/prove Alien::Libarchive
+  - perl util/prove Acme::Alien::DontPanic
