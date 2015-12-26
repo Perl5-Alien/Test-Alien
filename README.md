@@ -28,6 +28,8 @@ Test that your library works with `XS`:
     alien_ok 'Alien::Editline';
     my $xs = do { local $/; <DATA> };
     xs_ok $xs, with_subtest {
+      my($module) = @_;
+      ok $module->version;
     };
     
     __DATA__
@@ -47,6 +49,22 @@ Test that your library works with `XS`:
     
     const char *version(class);
         const char *class;
+
+Test that your library works with [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus):
+
+    use Test::Stream -V1;
+    use Test::Alien;
+    use Alien::LibYAML;
+    
+    alien_ok 'Alien::LibYAML';
+    ffi_ok { symbols => ['yaml_get_version'] }, with_subtest {
+      my($ffi) = @_;
+      my $get_version = $ffi->function(yaml_get_version => ['int*','int*','int*'] => 'void');
+      $get_version->call(\my $major, \my $minor, \my $patch);
+      like $major, qr{[0-9]+};
+      like $minor, qr{[0-9]+};
+      like $patch, qr{[0-9]+};
+    };
 
 # DESCRIPTION
 
