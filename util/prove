@@ -24,4 +24,5 @@ foreach my $mod (@ARGV)
 
 my $lib = File::Spec->catdir( $root, qw( lib perl5 ));
 
-system 'prove', '-lv', -I => $lib, 't';
+exec 'prove', '-lv', -I => $lib, 't';
+
