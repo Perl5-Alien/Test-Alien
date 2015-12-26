@@ -11,6 +11,7 @@ my $post_diag;
 
 $modules{$_} = $_ for qw(
   Alien::Base
+  Alien::Libarchive
   Capture::Tiny
   ExtUtils::CBuilder
   ExtUtils::MakeMaker
