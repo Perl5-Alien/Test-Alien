@@ -106,7 +106,53 @@ isolation to other testing libraries so that shouldn't be too terrible.
     alien_ok $alien;
 
 Load the given [Alien](https://metacpan.org/pod/Alien) instance or class.  Checks that the instance or class conforms to the same
-interface as [Alien::Base](https://metacpan.org/pod/Alien::Base).  Will be used by subsequent tests.
+interface as [Alien::Base](https://metacpan.org/pod/Alien::Base).  Will be used by subsequent tests.  The `$alien` module only needs to
+provide these methods in order to conform to the [Alien::Base](https://metacpan.org/pod/Alien::Base) interface:
+
+- cflags
+
+    String containing the compiler flags
+
+- libs
+
+    String containing the linker and library flags
+
+- dynamic\_libs
+
+    List of dynamic libraries.  Returns empty list if the [Alien](https://metacpan.org/pod/Alien) module does not provide this.
+
+- bin\_dir
+
+    Directory containing tool binaries.  Returns empty list if the [Alien](https://metacpan.org/pod/Alien) module does not provide
+    this.
+
+If your [Alien](https://metacpan.org/pod/Alien) module does not conform to this interface then you can create a synthetic [Alien](https://metacpan.org/pod/Alien)
+module using the ["synthetic"](#synthetic) function.
+
+## synthetic
+
+    my $alien = synthetic \%config;
+
+Create a synthetic [Alien](https://metacpan.org/pod/Alien) module which can be passed into ["alien\_ok"](#alien_ok).  `\%config`
+can contain these keys (all of which are optional):
+
+- cflags
+
+    String containing the compiler flags
+
+- libs
+
+    String containing the linker and library flags
+
+- dynamic\_libs
+
+    List reference containing the dynamic libraries.
+
+- bin\_dir
+
+    Tool binary directory.
+
+See [Test::Alien::Synthetic](https://metacpan.org/pod/Test::Alien::Synthetic) for more details.
 
 ## run\_ok
 

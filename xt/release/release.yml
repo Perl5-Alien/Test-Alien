@@ -11,6 +11,7 @@ pod_spelling_system:
     - xs
     - lang
     - useable
+    - cflags
 
 pod_coverage:
   skip: 0
