@@ -20,3 +20,4 @@ script:
   - perl util/prove
   - perl util/prove Alien::Base
   - perl util/prove FFI::Platypus
+  - perl util/prove Alien::Libarchive
