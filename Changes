@@ -2,5 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.02      2015-12-25 22:18:53 -0700
+  - Fixes for Windows.
+  - First CPAN release.
+
 0.01      2015-12-25 20:20:16 -0700
   - initial version
