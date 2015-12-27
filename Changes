@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.03      2015-12-26 17:28:45 -0700
   - Fixed (hopefully) test failure in
     test_alien_synthetic_libarchive.t
     when FFI::Platypus was installed
