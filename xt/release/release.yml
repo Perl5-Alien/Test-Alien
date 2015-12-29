@@ -12,6 +12,9 @@ pod_spelling_system:
     - lang
     - useable
     - cflags
+    - subtests
+    - subtest
+    - libs
 
 pod_coverage:
   skip: 0
