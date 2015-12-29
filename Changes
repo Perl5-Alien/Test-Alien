@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.04      2015-12-29 13:52:08 -0500
+  - Tweaked test skips based on cpantesters feedback
+
 0.03      2015-12-26 17:28:45 -0700
   - Fixed (hopefully) test failure in
     test_alien_synthetic_libarchive.t
