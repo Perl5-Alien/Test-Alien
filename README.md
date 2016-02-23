@@ -6,7 +6,7 @@ Testing tools for Alien modules
 
 Test commands that come with your Alien:
 
-    use Test::Stream -V1;
+    use Test2::Bundle::Extended;
     use Test::Alien;
     use Alien::patch;
     
@@ -21,7 +21,7 @@ Test commands that come with your Alien:
 
 Test that your library works with `XS`:
 
-    use Test::Stream -V1;
+    use Test2::Bundle::Extended;
     use Test::Alien;
     use Alien::Editline;
     
@@ -52,7 +52,7 @@ Test that your library works with `XS`:
 
 Test that your library works with [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus):
 
-    use Test::Stream -V1;
+    use Test2::Bundle::Extended;
     use Test::Alien;
     use Alien::LibYAML;
     
@@ -92,9 +92,9 @@ prerequisites are automatically skipped.  For example, ["xs\_ok"](#xs_ok) will a
 itself if a compiler is not found, and ["ffi\_ok"](#ffi_ok) will automatically skip itself
 if [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus) is not installed.
 
-**NOTE**: This module uses [Test::Stream](https://metacpan.org/pod/Test::Stream) instead of the classic [Test::More](https://metacpan.org/pod/Test::More).
+**NOTE**: This module uses [Test2](https://metacpan.org/pod/Test2) instead of the classic [Test::More](https://metacpan.org/pod/Test::More).
 As of this writing that makes it incompatible with the vast majority of
-testing modules on CPAN.  This will change when/if [Test::Stream](https://metacpan.org/pod/Test::Stream) replaces
+testing modules on CPAN.  This will change when/if [Test2](https://metacpan.org/pod/Test2) replaces
 [Test::More](https://metacpan.org/pod/Test::More).  For the most part testing of [Alien](https://metacpan.org/pod/Alien) modules is done in
 isolation to other testing libraries so that shouldn't be too terrible.
 
