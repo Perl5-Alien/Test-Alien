@@ -18,7 +18,8 @@ perl:
 
 script:
   - perl util/prove
-  - perl util/prove Alien::Base
+# currently included in [@Author::Plicease] bundle
+#  - perl util/prove Alien::Base
   - perl util/prove FFI::Platypus
   - perl util/prove Alien::Libarchive
   - perl util/prove Acme::Alien::DontPanic
