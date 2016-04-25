@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Migrated to Test2 API - This will likely break your
+    test if you are using Test::Stream.  Sorry!
 
 0.04      2015-12-29 13:52:08 -0500
   - Tweaked test skips based on cpantesters feedback

@@ -14,13 +14,15 @@ $modules{$_} = $_ for qw(
   Alien::Base
   Alien::Libarchive
   Capture::Tiny
+  Exporter
   ExtUtils::CBuilder
   ExtUtils::MakeMaker
   ExtUtils::ParseXS
   FFI::Platypus
   File::Which
+  Test2
+  Test2::Suite
   Test::More
-  Test::Stream
 );
 
 

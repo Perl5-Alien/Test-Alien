@@ -249,7 +249,7 @@ For example:
 
 # SEE ALSO
 
-- [Test::Stream](https://metacpan.org/pod/Test::Stream)
+- [Test2](https://metacpan.org/pod/Test2)
 - [Test::Alien::Run](https://metacpan.org/pod/Test::Alien::Run)
 - [Test::Alien::CanCompile](https://metacpan.org/pod/Test::Alien::CanCompile)
 - [Test::Alien::CanPlatypus](https://metacpan.org/pod/Test::Alien::CanPlatypus)
@@ -257,15 +257,11 @@ For example:
 
 # CAVEATS
 
-This module uses [Test::Stream](https://metacpan.org/pod/Test::Stream) instead of [Test::More](https://metacpan.org/pod/Test::More).
-
-Although [Test::Stream](https://metacpan.org/pod/Test::Stream) has gone "stable" it is a relatively new
-module, and thus the interface is probably still in a state of flux
-to some extent.
+This module uses [Test2](https://metacpan.org/pod/Test2) instead of [Test::More](https://metacpan.org/pod/Test::More).
 
 # AUTHOR
 
-Graham Ollis &lt;plicease@cpan.org>
+Graham Ollis <plicease@cpan.org>
 
 # COPYRIGHT AND LICENSE
 

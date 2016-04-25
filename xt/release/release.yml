@@ -21,5 +21,6 @@ pod_coverage:
   # format is "Class#method" or "Class",regex allowed
   # for either Class or method.
   private:
-    - #load_ts_plugin
+    - Test::Alien::CanCompile#skip
+    - Test::Alien::CanPlatypus#skip
     - Test::Alien#with_subtest
