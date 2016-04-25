@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.05      2016-04-25 06:59:01 -0400
   - Migrated to Test2 API - This will likely break your
     test if you are using Test::Stream.  Sorry!
 
