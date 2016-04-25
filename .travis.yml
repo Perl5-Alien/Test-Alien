@@ -5,6 +5,11 @@ install:
   - perlbrew list
   - dzil authordeps --missing | cpanm -n
   - dzil listdeps   --missing | cpanm -n
+  # maybe a toolchain bug on 5.8, but File::Which
+  # isn't being upgraded on 5.8.  When we go to
+  # DZ 6.x and 5.8 is no longer supported by DZ
+  # we can chuck this.
+  - cpanm File::Which
 
 perl:
   - "5.8"
