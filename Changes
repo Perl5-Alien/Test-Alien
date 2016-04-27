@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.06      2016-04-27 14:52:12 -0400
   - Better diagnostic when there is a link exception.
 
 0.05      2016-04-25 06:59:01 -0400
