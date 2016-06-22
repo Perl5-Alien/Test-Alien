@@ -1,4 +1,4 @@
-# Test::Alien [![Build Status](https://secure.travis-ci.org/plicease/Test-Alien.png)](http://travis-ci.org/plicease/Test-Alien)
+# Test::Alien [![Build Status](https://secure.travis-ci.org/Perl5-Alien/Test-Alien.png)](http://travis-ci.org/Perl5-Alien/Test-Alien)
 
 Testing tools for Alien modules
 
