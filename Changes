@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.08      2016-12-29 18:03:35 -0500
+  - Fixes to silence warnings coming from recent versions of Test2::Suite
+
 0.07      2016-05-10 11:31:59 -0400
   - Require non-experimental Test2/Test-Simple and Test2::Suite
 
