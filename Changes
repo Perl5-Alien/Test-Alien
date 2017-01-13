@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Test::Alien::Run#note and #diag can be chained like the other 
+    methods
 
 0.08      2016-12-29 18:03:35 -0500
   - Fixes to silence warnings coming from recent versions of Test2::Suite
