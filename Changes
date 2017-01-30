@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Only use static methods (see last entry) on share installs
+    Typically you want to use the dynamic libraries on a system
+    install
 
 0.10      2017-01-30 18:37:41 -0500
   - Use static methods for cflags and libs if they are provided
