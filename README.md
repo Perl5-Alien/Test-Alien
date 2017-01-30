@@ -138,11 +138,19 @@ can contain these keys (all of which are optional):
 
 - cflags
 
-    String containing the compiler flags
+    String containing the compiler flags.
+
+- cflags\_static
+
+    String containing the static compiler flags (optional).
 
 - libs
 
-    String containing the linker and library flags
+    String containing the linker and library flags.
+
+- libs\_static
+
+    String containing the static linker flags (optional).
 
 - dynamic\_libs
 

@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Use static methods for cflags and libs if they are provided
+    by the Alien module.
 
 0.09      2017-01-13 07:13:38 -0500
   - Test::Alien::Run#note and #diag can be chained like the other 
