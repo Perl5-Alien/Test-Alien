@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.10      2017-01-30 18:37:41 -0500
   - Use static methods for cflags and libs if they are provided
     by the Alien module.
 
