@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - workaround for Capture::Tiny on MSWin32
 
 0.11      2017-01-30 18:45:05 -0500
   - Only use static methods (see last entry) on share installs
