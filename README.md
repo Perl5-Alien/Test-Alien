@@ -251,15 +251,15 @@ For example:
 
 # SEE ALSO
 
+- [Alien](https://metacpan.org/pod/Alien)
+- [Alien::Base](https://metacpan.org/pod/Alien::Base)
+- [Alien::Build](https://metacpan.org/pod/Alien::Build)
+- [alienfile](https://metacpan.org/pod/alienfile)
 - [Test2](https://metacpan.org/pod/Test2)
 - [Test::Alien::Run](https://metacpan.org/pod/Test::Alien::Run)
 - [Test::Alien::CanCompile](https://metacpan.org/pod/Test::Alien::CanCompile)
 - [Test::Alien::CanPlatypus](https://metacpan.org/pod/Test::Alien::CanPlatypus)
 - [Test::Alien::Synthetic](https://metacpan.org/pod/Test::Alien::Synthetic)
-
-# CAVEATS
-
-This module uses [Test2](https://metacpan.org/pod/Test2) instead of [Test::More](https://metacpan.org/pod/Test::More).
 
 # AUTHOR
 
