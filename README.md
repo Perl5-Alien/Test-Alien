@@ -10,14 +10,14 @@ Test commands that come with your Alien:
     use Test::Alien;
     use Alien::patch;
     
-    plan 4;
-    
     alien_ok 'Alien::patch';
     run_ok([ 'patch', '--version' ])
       ->success
       # we only accept the version written
       # by Larry ...
       ->out_like(qr{Larry Wall}); 
+    
+    done_testing;
 
 Test that your library works with `XS`:
 
@@ -32,6 +32,8 @@ Test that your library works with `XS`:
       ok $module->version;
     };
     
+    done_testing;
+
     __DATA__
     
     #include "EXTERN.h"
@@ -65,6 +67,8 @@ Test that your library works with [FFI::Platypus](https://metacpan.org/pod/FFI::
       like $minor, qr{[0-9]+};
       like $patch, qr{[0-9]+};
     };
+    
+    done_testing;
 
 # DESCRIPTION
 
