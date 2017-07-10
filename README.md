@@ -6,7 +6,7 @@ Testing tools for Alien modules
 
 Test commands that come with your Alien:
 
-    use Test2::Bundle::Extended;
+    use Test2::V0;
     use Test::Alien;
     use Alien::patch;
     
@@ -21,7 +21,7 @@ Test commands that come with your Alien:
 
 Test that your library works with `XS`:
 
-    use Test2::Bundle::Extended;
+    use Test2::V0;
     use Test::Alien;
     use Alien::Editline;
     
@@ -54,7 +54,7 @@ Test that your library works with `XS`:
 
 Test that your library works with [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus):
 
-    use Test2::Bundle::Extended;
+    use Test2::V0;
     use Test::Alien;
     use Alien::LibYAML;
     

@@ -22,6 +22,7 @@ $modules{$_} = $_ for qw(
   File::Which
   Test2
   Test2::Suite
+  Test2::V0
   Test::More
   Text::ParseWords
 );
