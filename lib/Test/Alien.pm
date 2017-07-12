@@ -35,6 +35,10 @@ our @EXPORT = qw( alien_ok run_ok xs_ok ffi_ok with_subtest synthetic );
 # ABSTRACT: Testing tools for Alien modules
 # VERSION
 
+=head1 NOTE
+
+B<NOTE>: this distribution has been ended.  L<Test::Alien> and the other modules that used to be distributed with this distribution can now be found as part of the C<Alien-Build> distribution.
+
 =head1 SYNOPSIS
 
 Test commands that come with your Alien:

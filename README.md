@@ -96,6 +96,10 @@ prerequisites are automatically skipped.  For example, ["xs\_ok"](#xs_ok) will a
 itself if a compiler is not found, and ["ffi\_ok"](#ffi_ok) will automatically skip itself
 if [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus) is not installed.
 
+# NOTE
+
+**NOTE**: this distribution has been ended.  [Test::Alien](https://metacpan.org/pod/Test::Alien) and the other modules that used to be distributed with this distribution can now be found as part of the `Alien-Build` distribution.
+
 # FUNCTIONS
 
 ## alien\_ok
