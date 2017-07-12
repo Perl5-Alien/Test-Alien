@@ -4,6 +4,8 @@ Testing tools for Alien modules
 
 # SYNOPSIS
 
+**NOTE**: this distribution has been ended.  [Test::Alien](https://metacpan.org/pod/Test::Alien) and the other modules that used to be distributed with this distribution can now be found as part of the `Alien-Build` distribution.
+
 Test commands that come with your Alien:
 
     use Test2::V0;
@@ -95,10 +97,6 @@ or if you are building from source and you are using `XS`), so tests with missin
 prerequisites are automatically skipped.  For example, ["xs\_ok"](#xs_ok) will automatically skip
 itself if a compiler is not found, and ["ffi\_ok"](#ffi_ok) will automatically skip itself
 if [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus) is not installed.
-
-# NOTE
-
-**NOTE**: this distribution has been ended.  [Test::Alien](https://metacpan.org/pod/Test::Alien) and the other modules that used to be distributed with this distribution can now be found as part of the `Alien-Build` distribution.
 
 # FUNCTIONS
 
